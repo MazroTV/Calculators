@@ -49,7 +49,7 @@ public class AgeCalculatorServlet extends HttpServlet {
             request.setAttribute("message", message);
         } catch (Exception ex){
         //Age input exists but not a number.
-
+        request.setAttribute("messsage", "Please enter a number.");
        
         }
         }else{
