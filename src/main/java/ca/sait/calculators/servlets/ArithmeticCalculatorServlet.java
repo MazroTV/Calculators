@@ -26,7 +26,9 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/WEB-INF/arithmeitccalculator.jsp").forward(request, response);
+
+        request.setAttribute("result", "---");
+        getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
     }
 
     /**
@@ -40,7 +42,48 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        getServletContext().getRequestDispatcher("/WEB-INF/arithmeitccalculator.jsp").forward(request, response);
+
+        
+        String numberOne = request.getParameter("num1");
+        String numberTwo = request.getParameter("num2");
+
+        int total;
+
+        try {
+
+        if(request.getParameter("operator").equals("add")) {
+
+            total = Integer.parseInt(numberOne) + Integer.parseInt(numberTwo);
+
+            request.setAttribute("result", total);
+
+        }else if(request.getParameter("operator").equals("sub")){
+
+            total = Integer.parseInt(numberOne) - Integer.parseInt(numberTwo);
+
+            request.setAttribute("result", total);
+
+        }else if(request.getParameter("operator").equals("multi")) {
+
+            total = Integer.parseInt(numberOne) * Integer.parseInt(numberTwo);
+
+            request.setAttribute("result", total);
+
+        }else if(request.getParameter("operator").equals("div")) {
+
+            total = Integer.parseInt(numberOne) / Integer.parseInt(numberTwo);
+
+            request.setAttribute("result", total);
+
+        }
+
+        }catch(Exception x){
+
+            request.setAttribute("result", "Invalid Please Try Again.");
+
+        }
+
+            getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
     }
 
     
