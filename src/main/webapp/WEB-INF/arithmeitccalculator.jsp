@@ -12,6 +12,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Arithmetic Calculator</h1>
+        
+        <form action="arithmetic" method="post">
+            <label for="num1">First:</label>
+            <input type="number" name="num1" id="num1">
+            <br>
+            <label for="num2">Second:</label>
+            <input type="number" name="num2" id="num2">
+            <br>
+            <button type="submit" name="operator" vaule="add">+</button>
+            <button type="submit" name="operator" vaule="sub">-</button>
+            <button type="submit" name="operator" vaule="multi">*</button>
+            <button type="submit" name="operator" vaule="div">%</button>
+        </form>
+        
+        <p>Result: ${result}</p>
     </body>
 </html>
