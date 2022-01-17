@@ -11,9 +11,6 @@ import javax.servlet.http.*;
  */
 
 public class ArithmeticCalculatorServlet extends HttpServlet {
-
-    
-
     
     /**
      * Handles the HTTP <code>GET</code> method.
