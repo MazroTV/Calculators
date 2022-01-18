@@ -15,16 +15,16 @@
         <h1>Arithmetic Calculator</h1>
         
         <form action="arithmetic" method="post">
-            <label for="numb1">First:</label>
+            <label for="num1">First:</label>
             <input type="number" name="num1" id="num1">
             <br>
-            <label for="numb2">Second:</label>
+            <label for="num2">Second:</label>
             <input type="number" name="num2" id="num2">
             <br>
-            <button type="submit" name="operator" vaule="add">+</button>
-            <button type="submit" name="operator" vaule="sub">-</button>
-            <button type="submit" name="operator" vaule="multi">*</button>
-            <button type="submit" name="operator" vaule="div">%</button>
+            <button type="submit" name="operator" value="add">+</button>
+            <button type="submit" name="operator" value="sub">-</button>
+            <button type="submit" name="operator" value="multi">*</button>
+            <button type="submit" name="operator" value="div">%</button>
         </form>
         
         <p>Result: ${result}</p>

@@ -46,10 +46,12 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
 
         int total;
 
-        int first = Integer.parseInt(numberOne);
-        int second = Inter.parseInt(numberTwo);
+       
 
         try {
+
+        int first = Integer.parseInt(numberOne);
+        int second = Integer.parseInt(numberTwo);
 
         if(request.getParameter("operator").equals("add")) {
 
