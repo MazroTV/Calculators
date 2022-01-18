@@ -46,35 +46,38 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
 
         int total;
 
+        int first = Integer.parseInt(numberOne);
+        int second = Inter.parseInt(numberTwo);
+
         try {
 
         if(request.getParameter("operator").equals("add")) {
 
-            total = Integer.parseInt(numberOne) + Integer.parseInt(numberTwo);
+            total = first + second;
 
             request.setAttribute("result", total);
 
         }else if(request.getParameter("operator").equals("sub")){
 
-            total = Integer.parseInt(numberOne) - Integer.parseInt(numberTwo);
+            total = first - second;
 
             request.setAttribute("result", total);
 
         }else if(request.getParameter("operator").equals("multi")) {
 
-            total = Integer.parseInt(numberOne) * Integer.parseInt(numberTwo);
+            total = first * second;
 
             request.setAttribute("result", total);
 
         }else if(request.getParameter("operator").equals("div")) {
 
-            total = Integer.parseInt(numberOne) / Integer.parseInt(numberTwo);
+            total = first / second;
 
             request.setAttribute("result", total);
 
         }
 
-        }catch(Exception x){
+        }catch(Exception ex){
 
             request.setAttribute("result", "Invalid Please Try Again.");
 
